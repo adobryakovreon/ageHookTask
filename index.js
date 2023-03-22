@@ -32,11 +32,5 @@ api.getAccessToken().then(() => {
 		await api.updateContacts(req.body);
 		res.send("OK");
 	});
-
-	app.post("/update", async (req, res) => {
-		console.log(req.body);
-		res.send("OK");
-	});
-
 	app.listen(config.PORT, () => logger.debug("Server started on ", config.PORT));
 });
